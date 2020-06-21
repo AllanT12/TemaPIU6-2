@@ -199,7 +199,18 @@ namespace TemaPIU1
             return bogati;
 
         }
-        public int GetUtilizatorssaraci()
+        public List<Utilizator> GetUtilisaraci()
+        {
+            List<Utilizator> utilizators = GetUtilizators();
+            List<Utilizator> saraci = new List<Utilizator>();
+            foreach (Utilizator s in utilizators)
+            {
+                if (s.Buget <= 500)
+                    saraci.Add(s);
+            }
+            return saraci;
+        }
+        public int GetSumaUtilizatori()
         {
             int sum = 0;
             List<Utilizator> utilizators = GetUtilizators();

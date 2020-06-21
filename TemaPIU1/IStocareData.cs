@@ -18,7 +18,8 @@ namespace TemaPIU1
         void UpdateUtilizator(Utilizator[] u,int nr,Sejur s);
         void updateUtilizator(Utilizator u,int id, Sejur s);
         List<Utilizator> GetUtilizatorsbogati();
-        int GetUtilizatorssaraci();
+        List<Utilizator> GetUtilisaraci();
+        int GetSumaUtilizatori();
         List<Utilizator> Data(DateTime dat);
     }
 }

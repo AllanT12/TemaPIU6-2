@@ -93,5 +93,30 @@ namespace FORMULAR
             }
            
         }
+
+        private void saraciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Utilizator> utilizators = adminUtilizatori.GetUtilisaraci();
+            dataGridView1.DataSource = utilizators.Select(u => new { u.Nume, u.Prenume, u.Buget, Prefenta = string.Join(",", u.Optiune), u.Preferinta, u.Tara_Pref, u.dataRezervarii }).ToList();
+        }
+
+        private void bogatiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Utilizator> utilizators = adminUtilizatori.GetUtilizatorsbogati();
+            dataGridView1.DataSource = utilizators.Select(u => new { u.Nume, u.Prenume, u.Buget, Prefenta = string.Join(",", u.Optiune), u.Preferinta, u.Tara_Pref, u.dataRezervarii }).ToList();
+        }
+
+        private void saortareDupaBugetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Utilizator> utilizators = adminUtilizatori.GetUtilizators();
+            dataGridView1.DataSource = utilizators.Select(u => new { u.Nume, u.Prenume, u.Buget, Prefenta = string.Join(",", u.Optiune), u.Preferinta, u.Tara_Pref, u.dataRezervarii }).ToList();
+        }
+
+        private void btnSuma_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            sum = adminUtilizatori.GetSumaUtilizatori();
+            label2.Text = Convert.ToString(sum);
+        }
     }
 }

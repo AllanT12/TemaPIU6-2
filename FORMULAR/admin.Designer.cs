@@ -33,7 +33,14 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Salvare_ca_excel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.saortareDupaBugetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saraciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bogatiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSuma = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -47,7 +54,7 @@
             // 
             // btnCauta
             // 
-            this.btnCauta.Location = new System.Drawing.Point(91, 441);
+            this.btnCauta.Location = new System.Drawing.Point(20, 438);
             this.btnCauta.Name = "btnCauta";
             this.btnCauta.Size = new System.Drawing.Size(75, 23);
             this.btnCauta.TabIndex = 1;
@@ -57,7 +64,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(196, 441);
+            this.dateTimePicker1.Location = new System.Drawing.Point(101, 441);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 2;
@@ -81,21 +88,80 @@
             this.label1.Size = new System.Drawing.Size(91, 23);
             this.label1.TabIndex = 4;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saortareDupaBugetToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "sotare dupa buget";
+            // 
+            // saortareDupaBugetToolStripMenuItem
+            // 
+            this.saortareDupaBugetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saraciToolStripMenuItem,
+            this.bogatiToolStripMenuItem});
+            this.saortareDupaBugetToolStripMenuItem.Name = "saortareDupaBugetToolStripMenuItem";
+            this.saortareDupaBugetToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
+            this.saortareDupaBugetToolStripMenuItem.Text = "saortare dupa buget";
+            this.saortareDupaBugetToolStripMenuItem.Click += new System.EventHandler(this.saortareDupaBugetToolStripMenuItem_Click);
+            // 
+            // saraciToolStripMenuItem
+            // 
+            this.saraciToolStripMenuItem.Name = "saraciToolStripMenuItem";
+            this.saraciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saraciToolStripMenuItem.Text = "saraci";
+            this.saraciToolStripMenuItem.Click += new System.EventHandler(this.saraciToolStripMenuItem_Click);
+            // 
+            // bogatiToolStripMenuItem
+            // 
+            this.bogatiToolStripMenuItem.Name = "bogatiToolStripMenuItem";
+            this.bogatiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bogatiToolStripMenuItem.Text = "bogati";
+            this.bogatiToolStripMenuItem.Click += new System.EventHandler(this.bogatiToolStripMenuItem_Click);
+            // 
+            // btnSuma
+            // 
+            this.btnSuma.Location = new System.Drawing.Point(337, 438);
+            this.btnSuma.Name = "btnSuma";
+            this.btnSuma.Size = new System.Drawing.Size(75, 23);
+            this.btnSuma.TabIndex = 6;
+            this.btnSuma.Text = "Suma";
+            this.btnSuma.UseVisualStyleBackColor = true;
+            this.btnSuma.Click += new System.EventHandler(this.btnSuma_Click);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(418, 438);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 23);
+            this.label2.TabIndex = 7;
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 486);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnSuma);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Salvare_ca_excel);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCauta);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "admin";
             this.Text = "admin";
             this.Load += new System.EventHandler(this.admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -106,5 +172,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button Salvare_ca_excel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem saortareDupaBugetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saraciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bogatiToolStripMenuItem;
+        private System.Windows.Forms.Button btnSuma;
+        private System.Windows.Forms.Label label2;
     }
 }
